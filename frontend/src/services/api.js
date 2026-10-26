@@ -1,16 +1,9 @@
 import axios from 'axios';
 
-const getBaseUrl = () => {
-  if (import.meta.env.VITE_API_URL) {
-    let url = import.meta.env.VITE_API_URL.trim();
-    if (url.endsWith('/')) url = url.slice(0, -1);
-    if (!url.endsWith('/api')) url += '/api';
-    return url;
-  }
-  return '/api';
-};
+// Live production Render backend URL
+const PROD_BACKEND_URL = 'https://gvmc-0qrw.onrender.com/api';
 
-export const API_BASE_URL = getBaseUrl();
+export const API_BASE_URL = import.meta.env.VITE_API_URL || PROD_BACKEND_URL;
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -19,9 +12,21 @@ const api = axios.create({
   },
 });
 
-// Interceptor to attach Authorization header if token exists
+// Interceptor to ensure every request goes to the correct backend and attaches auth token
 api.interceptors.request.use(
   (config) => {
+    // Dynamic runtime routing
+    if (
+      typeof window !== 'undefined' &&
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ) {
+      if (!import.meta.env.VITE_API_URL) {
+        config.baseURL = 'http://localhost:5000/api';
+      }
+    } else {
+      config.baseURL = import.meta.env.VITE_API_URL || PROD_BACKEND_URL;
+    }
+
     const token = localStorage.getItem('gvmc_admin_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -36,7 +41,6 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response && error.response.status === 401) {
-      // Clear token if invalid or expired
       if (
         typeof window !== 'undefined' &&
         window.location.pathname.startsWith('/admin') &&
@@ -81,7 +85,12 @@ export const datasetsAPI = {
     return response.data;
   },
   downloadUrl: (id) => {
-    return `${API_BASE_URL}/datasets/${id}/download`;
+    const base =
+      typeof window !== 'undefined' &&
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? 'http://localhost:5000/api'
+        : PROD_BACKEND_URL;
+    return `${base}/datasets/${id}/download`;
   },
   create: async (formData) => {
     const response = await api.post('/datasets', formData, {
