@@ -1,0 +1,15 @@
+UPHC_Code,Facility_Name,Zone,Ward_No,Medical_Officers,Daily_Average_OPD,Maternal_Care_ANC_Monthly,Child_Immunization_Monthly,Lab_Diagnostics_Available,Emergency_Services_24x7,Telemedicine_Facility
+UPHC-01,Madhurawada Central UPHC,Zone 1,Ward 3,2,145,210,185,Yes (32 Parameters),No,Yes
+UPHC-02,Rushikonda Beach UPHC,Zone 1,Ward 2,1,92,120,110,Yes (24 Parameters),No,Yes
+UPHC-03,Seethammadhara Health Post,Zone 2,Ward 16,2,168,245,220,Yes (42 Parameters),Yes,Yes
+UPHC-04,Maddilapalem Community Health,Zone 2,Ward 19,2,185,260,240,Yes (42 Parameters),Yes,Yes
+UPHC-05,Jagadamba Junction Primary Post,Zone 3,Ward 26,3,230,310,295,Yes (50 Parameters),Yes,Yes
+UPHC-06,Dwaraka Nagar Urban Health Unit,Zone 3,Ward 30,2,190,270,250,Yes (42 Parameters),Yes,Yes
+UPHC-07,Poorana Market Dispensary,Zone 4,Ward 37,2,155,225,205,Yes (32 Parameters),No,Yes
+UPHC-08,One Town Port Health Centre,Zone 4,Ward 41,2,140,195,180,Yes (32 Parameters),No,Yes
+UPHC-09,Gajuwaka Industrial UPHC,Zone 5,Ward 53,3,245,340,320,Yes (50 Parameters),Yes,Yes
+UPHC-10,Sriharipuram Civic Clinic,Zone 5,Ward 57,2,175,230,215,Yes (42 Parameters),No,Yes
+UPHC-11,Mindi Colony Dispensary,Zone 6,Ward 66,1,110,140,135,Yes (24 Parameters),No,Yes
+UPHC-12,Gopalapatnam Urban Clinic,Zone 7,Ward 74,2,165,215,200,Yes (32 Parameters),No,Yes
+UPHC-13,Pendurthi Main Health Centre,Zone 7,Ward 79,2,180,250,230,Yes (42 Parameters),Yes,Yes
+UPHC-14,Aganampudi Health Post,Zone 8,Ward 88,1,115,150,140,Yes (24 Parameters),No,Yes

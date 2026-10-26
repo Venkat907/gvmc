@@ -1,0 +1,120 @@
+[
+  {
+    "routeNumber": "28A",
+    "routeName": "RK Beach to Simhachalam Foothills",
+    "origin": "RK Beach (Coastal Marine Drive)",
+    "destination": "Simhachalam Temple Bus Complex",
+    "transitMode": "BRTS & City Express",
+    "totalDistanceKm": 18.5,
+    "averageTripMinutes": 42,
+    "fleetType": "Electric Buses (12m Low-Floor)",
+    "dailyTrips": 72,
+    "peakFrequencyMins": 8,
+    "offPeakFrequencyMins": 15,
+    "averageDailyRidership": 14200,
+    "fareRangeINR": "10 - 35",
+    "keyStops": [
+      "RK Beach",
+      "Siripuram",
+      "RTC Complex",
+      "Gurudwara Junction",
+      "NAD Kotha Road",
+      "Simhachalam"
+    ]
+  },
+  {
+    "routeNumber": "38K",
+    "routeName": "Kurmannapalem to Madhurawada IT Park",
+    "origin": "Steel Plant Township (Kurmannapalem)",
+    "destination": "Hill 3 IT SEZ Madhurawada",
+    "transitMode": "Corridor Express",
+    "totalDistanceKm": 34.2,
+    "averageTripMinutes": 65,
+    "fleetType": "Electric AC Bus",
+    "dailyTrips": 48,
+    "peakFrequencyMins": 12,
+    "offPeakFrequencyMins": 20,
+    "averageDailyRidership": 9850,
+    "fareRangeINR": "15 - 55",
+    "keyStops": [
+      "Kurmannapalem",
+      "Gajuwaka",
+      "NAD Flyover",
+      "Gurudwara",
+      "Maddilapalem",
+      "Hanumanthawaka",
+      "Madhurawada IT SEZ"
+    ]
+  },
+  {
+    "routeNumber": "400",
+    "routeName": "Visakhapatnam Railway Station to Bheemunipatnam",
+    "origin": "Visakhapatnam Central Railway Station",
+    "destination": "Bheemili Dutch Town Hub",
+    "transitMode": "Scenic Coastal Transit",
+    "totalDistanceKm": 31,
+    "averageTripMinutes": 58,
+    "fleetType": "Clean CNG / Hybrid",
+    "dailyTrips": 36,
+    "peakFrequencyMins": 15,
+    "offPeakFrequencyMins": 25,
+    "averageDailyRidership": 7100,
+    "fareRangeINR": "15 - 45",
+    "keyStops": [
+      "Station",
+      "Dwaraka Bus Station",
+      "Siripuram",
+      "Rushikonda Beach",
+      "Thimmapuram",
+      "Mangamaripeta",
+      "Bheemunipatnam"
+    ]
+  },
+  {
+    "routeNumber": "6A",
+    "routeName": "Old Post Office (One Town) to Pendurthi",
+    "origin": "One Town Heritage Market",
+    "destination": "Pendurthi Junction Depot",
+    "transitMode": "Suburban Transit",
+    "totalDistanceKm": 22,
+    "averageTripMinutes": 50,
+    "fleetType": "Diesel BS-VI",
+    "dailyTrips": 54,
+    "peakFrequencyMins": 10,
+    "offPeakFrequencyMins": 18,
+    "averageDailyRidership": 11200,
+    "fareRangeINR": "10 - 35",
+    "keyStops": [
+      "One Town",
+      "Port Area",
+      "Convent Junction",
+      "Kancharapalem",
+      "NAD",
+      "Gopalapatnam",
+      "Pendurthi"
+    ]
+  },
+  {
+    "routeNumber": "999",
+    "routeName": "Visakhapatnam Airport Shuttle Express",
+    "origin": "Visakhapatnam International Airport (VTZ)",
+    "destination": "Rushikonda IT Hills",
+    "transitMode": "Airport Non-Stop Link",
+    "totalDistanceKm": 26.5,
+    "averageTripMinutes": 45,
+    "fleetType": "Premium Electric AC Low-Floor",
+    "dailyTrips": 32,
+    "peakFrequencyMins": 30,
+    "offPeakFrequencyMins": 45,
+    "averageDailyRidership": 3400,
+    "fareRangeINR": "50 - 100",
+    "keyStops": [
+      "Airport Terminal",
+      "NAD Flyover",
+      "RTC Complex",
+      "Siripuram",
+      "Park Hotel",
+      "Rushikonda SEZ"
+    ]
+  }
+]

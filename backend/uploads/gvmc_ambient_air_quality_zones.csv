@@ -1,0 +1,13 @@
+Station_ID,Station_Location,Zone,Date,PM2_5_ug_m3,PM10_ug_m3,Sulphur_Dioxide_SO2_ug_m3,Nitrogen_Dioxide_NO2_ug_m3,Carbon_Monoxide_CO_mg_m3,Ozone_O3_ug_m3,Ambient_Noise_Day_dB,Air_Quality_Index_AQI,AQI_Category
+AQI-01,Ramakrishna Beach Promenade,Zone 3,2024-10-01,24.5,48.2,8.4,14.2,0.6,32.5,58.4,52,Satisfactory
+AQI-02,Gajuwaka Industrial Crossroads,Zone 5,2024-10-01,68.4,142.0,24.8,38.5,1.8,45.0,74.2,148,Moderate
+AQI-03,Madhurawada IT Hill 3,Zone 1,2024-10-01,18.2,36.5,6.2,11.0,0.4,28.4,49.5,41,Good
+AQI-04,Siripuram Civic Circle,Zone 3,2024-10-01,42.0,85.4,14.5,28.0,1.1,38.0,68.9,92,Satisfactory
+AQI-05,Port Trust Conveyor Boundary,Zone 4,2024-10-01,76.8,165.2,28.5,44.2,2.1,51.0,76.8,162,Moderate
+AQI-06,NAD Flyover Interchange,Zone 6,2024-10-01,58.2,118.0,19.4,34.8,1.5,41.2,78.5,124,Moderate
+AQI-01,Ramakrishna Beach Promenade,Zone 3,2024-10-02,22.1,45.0,7.9,13.8,0.5,30.8,57.8,48,Good
+AQI-02,Gajuwaka Industrial Crossroads,Zone 5,2024-10-02,72.1,148.5,26.2,40.1,1.9,46.2,75.0,154,Moderate
+AQI-03,Madhurawada IT Hill 3,Zone 1,2024-10-02,19.5,38.0,6.5,11.8,0.4,29.1,50.2,44,Good
+AQI-04,Siripuram Civic Circle,Zone 3,2024-10-02,44.5,88.2,15.1,29.4,1.2,39.5,69.5,96,Satisfactory
+AQI-05,Port Trust Conveyor Boundary,Zone 4,2024-10-02,79.4,171.0,29.8,46.0,2.2,53.4,77.4,168,Moderate
+AQI-06,NAD Flyover Interchange,Zone 6,2024-10-02,61.0,122.5,20.5,36.2,1.6,42.8,79.1,130,Moderate

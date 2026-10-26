@@ -1,0 +1,21 @@
+Date,Reservoir_Name,Design_Capacity_MCFT,Current_Level_FT,Full_Reservoir_Level_FT,Daily_Inflow_Cusecs,Daily_Outflow_MLD,Water_Quality_TDS_PPM,Zone_Coverage,Operational_Status
+2024-10-01,Mudharasarlova,23.5,18.4,21.0,42.5,16.2,210,Zone 2 (Hanumanthawaka & Maddilapalem),Normal
+2024-10-01,Gambhiram,45.0,38.2,42.0,85.0,28.5,195,Zone 1 (Madhurawada & Rushikonda),Normal
+2024-10-01,Raiwada,360.0,295.4,310.0,310.0,140.0,180,Zone 3 & 4 (Central Visakhapatnam & Dwaraka Nagar),Optimal
+2024-10-01,Thatipudi,112.5,96.8,105.0,195.0,72.0,175,Zone 5 & 6 (Gajuwaka & Industrial Corridor),Normal
+2024-10-01,Meghadrigedda,105.0,82.4,94.0,140.0,55.0,230,Zone 7 & 8 (Pendurthi & Gopalapatnam),Maintenance
+2024-10-02,Mudharasarlova,23.5,18.6,21.0,45.0,16.0,212,Zone 2 (Hanumanthawaka & Maddilapalem),Normal
+2024-10-02,Gambhiram,45.0,38.5,42.0,88.0,28.0,190,Zone 1 (Madhurawada & Rushikonda),Normal
+2024-10-02,Raiwada,360.0,296.1,310.0,305.0,142.0,182,Zone 3 & 4 (Central Visakhapatnam & Dwaraka Nagar),Optimal
+2024-10-02,Thatipudi,112.5,97.2,105.0,190.0,71.5,178,Zone 5 & 6 (Gajuwaka & Industrial Corridor),Normal
+2024-10-02,Meghadrigedda,105.0,83.1,94.0,145.0,54.5,228,Zone 7 & 8 (Pendurthi & Gopalapatnam),Normal
+2024-10-03,Mudharasarlova,23.5,18.9,21.0,48.0,16.5,215,Zone 2 (Hanumanthawaka & Maddilapalem),Normal
+2024-10-03,Gambhiram,45.0,38.9,42.0,92.0,29.0,188,Zone 1 (Madhurawada & Rushikonda),Optimal
+2024-10-03,Raiwada,360.0,297.0,310.0,318.0,145.0,185,Zone 3 & 4 (Central Visakhapatnam & Dwaraka Nagar),Optimal
+2024-10-03,Thatipudi,112.5,97.8,105.0,198.0,72.5,176,Zone 5 & 6 (Gajuwaka & Industrial Corridor),Normal
+2024-10-03,Meghadrigedda,105.0,83.8,94.0,150.0,56.0,225,Zone 7 & 8 (Pendurthi & Gopalapatnam),Normal
+2024-10-04,Mudharasarlova,23.5,19.1,21.0,50.0,16.8,210,Zone 2 (Hanumanthawaka & Maddilapalem),Normal
+2024-10-04,Gambhiram,45.0,39.2,42.0,95.0,29.5,185,Zone 1 (Madhurawada & Rushikonda),Optimal
+2024-10-04,Raiwada,360.0,298.2,310.0,325.0,146.0,180,Zone 3 & 4 (Central Visakhapatnam & Dwaraka Nagar),Optimal
+2024-10-04,Thatipudi,112.5,98.1,105.0,202.0,73.0,172,Zone 5 & 6 (Gajuwaka & Industrial Corridor),Normal
+2024-10-04,Meghadrigedda,105.0,84.2,94.0,152.0,56.5,222,Zone 7 & 8 (Pendurthi & Gopalapatnam),Normal

@@ -1,0 +1,105 @@
+[
+  {
+    "zoningCode": "R-1",
+    "zoneClassification": "Primary Low-Density Residential",
+    "permittedUses": [
+      "Single Family Bungalows",
+      "Villa Developments",
+      "Neighborhood Parks",
+      "Pre-primary Schools"
+    ],
+    "maxFloorAreaRatio": 1.5,
+    "maxBuildingHeightMeters": 15,
+    "mandatoryGreenSpacePercent": 15,
+    "applicableAreas": [
+      "Bheemili Coastal Enclave",
+      "Rushikonda Slopes",
+      "Madhurawada Valley"
+    ],
+    "crzRestrictionApplies": true,
+    "guidelineDocumentRef": "GVMC-MP2030-VOL2-SEC4.1"
+  },
+  {
+    "zoningCode": "R-2",
+    "zoneClassification": "Multi-Family Medium-to-High Density Residential",
+    "permittedUses": [
+      "Apartment Complexes",
+      "Gated Communities",
+      "Community Clinics",
+      "Convenience Retail"
+    ],
+    "maxFloorAreaRatio": 2.5,
+    "maxBuildingHeightMeters": 45,
+    "mandatoryGreenSpacePercent": 12,
+    "applicableAreas": [
+      "Seethammadhara",
+      "Yendada",
+      "Kommadi",
+      "Gopalapatnam"
+    ],
+    "crzRestrictionApplies": false,
+    "guidelineDocumentRef": "GVMC-MP2030-VOL2-SEC4.2"
+  },
+  {
+    "zoningCode": "C-1",
+    "zoneClassification": "Central Commercial & Business District",
+    "permittedUses": [
+      "Corporate Towers",
+      "Shopping Malls",
+      "Hotels & Multiplexes",
+      "FinTech Centers"
+    ],
+    "maxFloorAreaRatio": 3.5,
+    "maxBuildingHeightMeters": 75,
+    "mandatoryGreenSpacePercent": 10,
+    "applicableAreas": [
+      "Dwaraka Nagar",
+      "Asilmetta",
+      "Siripuram",
+      "Waltair Uplands"
+    ],
+    "crzRestrictionApplies": false,
+    "guidelineDocumentRef": "GVMC-MP2030-VOL2-SEC5.1"
+  },
+  {
+    "zoningCode": "I-2",
+    "zoneClassification": "Special Industrial & Heavy Manufacturing Hub",
+    "permittedUses": [
+      "Manufacturing Units",
+      "Heavy Fabrication",
+      "Logistics Warehousing",
+      "Ancillary Engineering"
+    ],
+    "maxFloorAreaRatio": 1.8,
+    "maxBuildingHeightMeters": 24,
+    "mandatoryGreenSpacePercent": 20,
+    "applicableAreas": [
+      "Autonagar Gajuwaka",
+      "BHPV Corridor",
+      "Duvvada Logistics Hub"
+    ],
+    "crzRestrictionApplies": false,
+    "guidelineDocumentRef": "GVMC-MP2030-VOL2-SEC6.3"
+  },
+  {
+    "zoningCode": "EC-1",
+    "zoneClassification": "Eco-Sensitive Coastal Tourism & Heritage Corridor",
+    "permittedUses": [
+      "Eco-Resorts",
+      "Marine Research Centers",
+      "Public Beach Promenades",
+      "Mangrove Sanctuaries"
+    ],
+    "maxFloorAreaRatio": 0.75,
+    "maxBuildingHeightMeters": 9,
+    "mandatoryGreenSpacePercent": 35,
+    "applicableAreas": [
+      "RK Beach Corridor",
+      "Thotlakonda Foot-hills",
+      "Bavikonda Buffer Zone",
+      "Kambalakonda Verge"
+    ],
+    "crzRestrictionApplies": true,
+    "guidelineDocumentRef": "GVMC-MP2030-VOL3-CRZ-SPECIAL"
+  }
+]
