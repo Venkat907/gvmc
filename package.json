@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "GVMC Open Data Portal for Researchers and Startups (SW61)",
   "scripts": {
+    "start": "cd backend && node src/server.js",
+    "build": "cd backend && npm install",
     "backend": "cd backend && npm start",
     "frontend": "cd frontend && npm run dev",
-    "seed": "cd backend && npm run seed",
-    "build": "cd frontend && npm install && npm run build"
+    "seed": "cd backend && npm run seed"
   },
   "keywords": [
     "gvmc",
