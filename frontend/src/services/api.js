@@ -1,16 +1,11 @@
 import axios from 'axios';
 
-// Determine base API URL
 const getBaseUrl = () => {
   if (import.meta.env.VITE_API_URL) {
     let url = import.meta.env.VITE_API_URL.trim();
     if (url.endsWith('/')) url = url.slice(0, -1);
     if (!url.endsWith('/api')) url += '/api';
     return url;
-  }
-  // In production builds (e.g. Vercel), default directly to live Render backend
-  if (import.meta.env.PROD) {
-    return 'https://gvmc-0qrw.onrender.com/api';
   }
   return '/api';
 };
@@ -24,20 +19,9 @@ const api = axios.create({
   },
 });
 
-// Interceptor to ensure production requests go to Render and attach token
+// Interceptor to attach Authorization header if token exists
 api.interceptors.request.use(
   (config) => {
-    // Runtime safety: if running on non-localhost domain and baseURL is /api, point to Render
-    if (
-      typeof window !== 'undefined' &&
-      window.location.hostname !== 'localhost' &&
-      window.location.hostname !== '127.0.0.1'
-    ) {
-      if (!config.baseURL || config.baseURL === '/api' || config.baseURL.startsWith('/')) {
-        config.baseURL = 'https://gvmc-0qrw.onrender.com/api';
-      }
-    }
-
     const token = localStorage.getItem('gvmc_admin_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -97,13 +81,7 @@ export const datasetsAPI = {
     return response.data;
   },
   downloadUrl: (id) => {
-    const base =
-      typeof window !== 'undefined' &&
-      window.location.hostname !== 'localhost' &&
-      window.location.hostname !== '127.0.0.1'
-        ? 'https://gvmc-0qrw.onrender.com/api'
-        : API_BASE_URL;
-    return `${base}/datasets/${id}/download`;
+    return `${API_BASE_URL}/datasets/${id}/download`;
   },
   create: async (formData) => {
     const response = await api.post('/datasets', formData, {
