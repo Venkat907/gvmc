@@ -29,21 +29,14 @@ app.use(
   })
 );
 
-// CORS configuration
-const allowedOrigin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
+// CORS configuration - Allow Vercel, localhost, and all frontend clients
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, curl, or Postman)
-      if (!origin || origin === allowedOrigin || origin === 'http://localhost:5173' || origin === 'http://127.0.0.1:5173') {
-        callback(null, true);
-      } else {
-        callback(null, true); // Permissive in dev/demo environment
-      }
-    },
+    origin: true,
     credentials: true,
   })
 );
+app.options('*', cors());
 
 // Request Logging
 if (process.env.NODE_ENV !== 'test') {

@@ -42,9 +42,14 @@ export const AdminLogin = () => {
         setErrorMessage(result.message || 'Authentication failed. Please verify credentials.');
       }
     } catch (err) {
-      setErrorMessage(
-        err.response?.data?.message || 'Server error occurred during authentication.'
-      );
+      console.error('Login submit error:', err);
+      const serverMsg =
+        err.response?.data?.message ||
+        (err.message === 'Network Error'
+          ? 'Cannot connect to backend server. Render may be waking up, please retry in 10 seconds.'
+          : err.message) ||
+        'Server error occurred during authentication.';
+      setErrorMessage(serverMsg);
     } finally {
       setIsSubmitting(false);
     }
