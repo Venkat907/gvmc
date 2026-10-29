@@ -3,7 +3,24 @@ import axios from 'axios';
 // Live production Render backend URL
 const PROD_BACKEND_URL = 'https://gvmc-0qrw.onrender.com/api';
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || PROD_BACKEND_URL;
+// Safe resolver: ignores invalid placeholders like literal "VITE_API_URL"
+const resolveApiUrl = () => {
+  const envVal = import.meta.env.VITE_API_URL;
+  if (
+    envVal &&
+    typeof envVal === 'string' &&
+    envVal.startsWith('http') &&
+    !envVal.includes('VITE_API_URL')
+  ) {
+    let url = envVal.trim();
+    if (url.endsWith('/')) url = url.slice(0, -1);
+    if (!url.endsWith('/api')) url += '/api';
+    return url;
+  }
+  return PROD_BACKEND_URL;
+};
+
+export const API_BASE_URL = resolveApiUrl();
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -20,11 +37,9 @@ api.interceptors.request.use(
       typeof window !== 'undefined' &&
       (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ) {
-      if (!import.meta.env.VITE_API_URL) {
-        config.baseURL = 'http://localhost:5000/api';
-      }
+      config.baseURL = 'http://localhost:5000/api';
     } else {
-      config.baseURL = import.meta.env.VITE_API_URL || PROD_BACKEND_URL;
+      config.baseURL = API_BASE_URL;
     }
 
     const token = localStorage.getItem('gvmc_admin_token');
@@ -85,12 +100,7 @@ export const datasetsAPI = {
     return response.data;
   },
   downloadUrl: (id) => {
-    const base =
-      typeof window !== 'undefined' &&
-      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-        ? 'http://localhost:5000/api'
-        : PROD_BACKEND_URL;
-    return `${base}/datasets/${id}/download`;
+    return `${API_BASE_URL}/datasets/${id}/download`;
   },
   create: async (formData) => {
     const response = await api.post('/datasets', formData, {
