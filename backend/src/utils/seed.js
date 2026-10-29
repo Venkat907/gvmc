@@ -269,21 +269,21 @@ const seedDatabase = async () => {
     await connectDB();
 
     // 1. Seed or Verify Default Admin
-    const defaultEmail = (process.env.DEFAULT_ADMIN_EMAIL || 'admin@gvmc.gov.in').toLowerCase();
-    const defaultPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'Admin@12345';
-    const defaultName = process.env.DEFAULT_ADMIN_NAME || 'GVMC Data Administrator';
+    const defaultEmail = (process.env.DEFAULT_ADMIN_EMAIL || 'venkatkona306@gmail.com').toLowerCase();
+    const defaultPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'Venkat@8374388956';
+    const defaultName = process.env.DEFAULT_ADMIN_NAME || 'Venkat Kona';
 
     let admin = await Admin.findOne({ email: defaultEmail });
     if (!admin) {
       const passwordHash = await Admin.hashPassword(defaultPassword);
       admin = await Admin.create({
-        username: 'gvmc_admin',
+        username: defaultEmail.split('@')[0],
         email: defaultEmail,
         passwordHash,
         name: defaultName,
         role: 'superadmin',
       });
-      console.log(`[Seed] Created default Administrator: ${defaultEmail} (Password: ${defaultPassword})`);
+      console.log(`[Seed] Created Administrator: ${defaultEmail}`);
     } else {
       console.log(`[Seed] Admin user already exists: ${defaultEmail}`);
     }

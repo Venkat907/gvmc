@@ -2,13 +2,16 @@ const mongoose = require('mongoose');
 
 let memoryServer = null;
 
+const ATLAS_URI =
+  'mongodb+srv://venkatkona306_db_user:Venkat%408374388956@gvmc.0ut7ylx.mongodb.net/gvmc_opendata?retryWrites=true&w=majority';
+
 const connectDB = async () => {
-  const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/gvmc_opendata';
+  const uri = process.env.MONGODB_URI || ATLAS_URI;
 
   try {
-    // Attempt connecting to the configured URI with a 2.5-second timeout
+    // Attempt connecting to the configured URI with a 5-second timeout
     await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 2500,
+      serverSelectionTimeoutMS: 5000,
     });
     console.log(`[Database] Successfully connected to MongoDB at ${mongoose.connection.host}:${mongoose.connection.port}/${mongoose.connection.name}`);
   } catch (err) {

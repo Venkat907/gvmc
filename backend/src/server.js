@@ -11,6 +11,7 @@ dotenv.config();
 const { connectDB } = require('./config/db');
 const { seedDatabase } = require('./utils/seed');
 const Dataset = require('./models/Dataset');
+const Admin = require('./models/Admin');
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
@@ -97,6 +98,31 @@ const startServer = async () => {
     if (datasetCount === 0) {
       console.log('[Startup] No datasets found in database. Auto-seeding initial demo data...');
       await seedDatabase();
+    }
+
+    // Ensure primary administrator exists
+    try {
+      const primaryEmail = (process.env.DEFAULT_ADMIN_EMAIL || 'venkatkona306@gmail.com').toLowerCase().trim();
+      const primaryPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'Venkat@8374388956';
+      const primaryName = process.env.DEFAULT_ADMIN_NAME || 'Venkat Kona';
+
+      let adminUser = await Admin.findOne({ email: primaryEmail });
+      if (!adminUser) {
+        const passwordHash = await Admin.hashPassword(primaryPassword);
+        adminUser = await Admin.create({
+          username: primaryEmail.split('@')[0],
+          email: primaryEmail,
+          passwordHash,
+          name: primaryName,
+          role: 'superadmin',
+        });
+        console.log(`[Startup] Seeded administrator: ${primaryEmail}`);
+      }
+
+      // Clean up legacy demo credentials account if present
+      await Admin.deleteOne({ email: 'admin@gvmc.gov.in' });
+    } catch (adminErr) {
+      console.warn('[Startup] Admin verification notice:', adminErr.message);
     }
 
     app.listen(PORT, () => {
