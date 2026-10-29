@@ -11,6 +11,7 @@ import {
   Info,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../services/api';
 import DemoBanner from '../components/common/DemoBanner';
 
 export const AdminLogin = () => {
@@ -151,6 +152,9 @@ export const AdminLogin = () => {
 
           <div className="pt-4 border-t border-slate-100 text-center text-slate-400 text-[11px]">
             Protected Government Open Data Administration Gateway (SW61)
+            <div className="text-[10px] text-slate-400 font-mono mt-1 break-all">
+              Target API: <span className="text-gov-700 font-semibold">{API_BASE_URL}</span>
+            </div>
           </div>
         </div>
       </div>
