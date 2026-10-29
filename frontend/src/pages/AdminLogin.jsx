@@ -5,14 +5,10 @@ import {
   Lock,
   Mail,
   AlertCircle,
-  KeyRound,
   ArrowRight,
-  Database,
-  Info,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { API_BASE_URL } from '../services/api';
-import DemoBanner from '../components/common/DemoBanner';
 
 export const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -56,12 +52,6 @@ export const AdminLogin = () => {
     }
   };
 
-  const handleFillDemoCredentials = () => {
-    setEmail('admin@gvmc.gov.in');
-    setPassword('Admin@12345');
-    setErrorMessage('');
-  };
-
   return (
     <div className="min-h-[80vh] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -78,26 +68,6 @@ export const AdminLogin = () => {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-6 sm:px-10 shadow-lg border border-slate-200 rounded-2xl space-y-6">
-          {/* Quick Demo Credentials Autofill Banner */}
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-3.5 text-xs text-blue-900 flex flex-col gap-2">
-            <div className="flex items-center gap-2 font-bold text-gov-800">
-              <Info className="w-4 h-4 text-gov-600 shrink-0" />
-              <span>Demonstration Credentials</span>
-            </div>
-            <div className="text-[11px] font-mono text-slate-600 bg-white/70 p-2 rounded border border-blue-100">
-              Email: <strong>admin@gvmc.gov.in</strong><br />
-              Password: <strong>Admin@12345</strong>
-            </div>
-            <button
-              type="button"
-              onClick={handleFillDemoCredentials}
-              className="text-left text-xs font-bold text-gov-700 hover:text-gov-900 hover:underline flex items-center gap-1"
-            >
-              <KeyRound className="w-3.5 h-3.5" />
-              <span>Autofill Demo Credentials</span>
-            </button>
-          </div>
-
           {errorMessage && (
             <div className="bg-rose-50 border border-rose-200 rounded-xl p-3.5 text-xs text-rose-700 flex items-start gap-2">
               <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
@@ -114,7 +84,7 @@ export const AdminLogin = () => {
                 <input
                   type="email"
                   required
-                  placeholder="admin@gvmc.gov.in"
+                  placeholder="admin@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-gov-500 font-medium"
